@@ -66,8 +66,6 @@ public class Main {
         }
     }
 
-//    the end method
-
     static boolean createMaze(ArrayList<ArrayList<Room>> rooms, Room room) {
         room.wasVisited = true;
         Room nextRoom = randomNeighbor(rooms, room.row, room.col);
@@ -89,7 +87,7 @@ public class Main {
         Room start = rooms.get(0).get(0);
         start.theStart = true;
 
-        Room end = rooms.get(0).get(9);
+        Room end = rooms.get(9).get(9);
         end.theEnd = true;
 
         createMaze(rooms, rooms.get(0).get(0));
